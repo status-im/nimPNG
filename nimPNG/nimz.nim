@@ -233,8 +233,7 @@ proc HuffmanTree_makeFromLengths(tree: var HuffmanTree, bitlen: openarray[int], 
   HuffmanTree_make2DTree(tree)
 
 proc make_coin(): Coin =
-  new(result)
-  result.symbols = @[]
+  result = Coin(weight: 0, symbols: @[])
 
 proc coin_copy(c1, c2: Coin) =
   c1.weight = c2.weight
